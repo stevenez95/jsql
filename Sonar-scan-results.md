@@ -1,6 +1,7 @@
-Sonar installation which monitors this project:
+Sonar installation which monitors master branch of this project:
 
 http://dev.mikl.org.ua/sonar/dashboard/index/1823?did=1
 
-* master branch is analyzed
-* there is a jenkins installation which polls master each hour to build and analyze project 
+Jenkins installation which polls master each hour to build and analyze project 
+
+* http://dev.mikl.org.ua/jenkins/
