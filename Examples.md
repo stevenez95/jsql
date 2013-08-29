@@ -10,3 +10,11 @@ Starting from **stmt** you can dive into the parsing result.
     List<String> tableList = tablesNamesFinder.getTableList(selectStatement);
 
 In **tableList** are all table names of the parsed SQL statement. The table names finder is an example of JSqlParser visitor pattern structure. You can use the visitor pattern to traverse the parsing result and compute on it.
+
+### Apply aliases to all expressions
+    Select select = (Select) CCJSqlParserUtil.parse("select a,b,c from test");
+    final AddAliasesVisitor instance = new AddAliasesVisitor();
+    select.getSelectBody().accept(instance);
+
+As a result you will get **SELECT a AS A1, b AS A2, c AS A3 FROM test**. At the moment the prefix
+can be configured.
