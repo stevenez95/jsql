@@ -18,3 +18,9 @@ In **tableList** are all table names of the parsed SQL statement. The table name
 
 As a result you will get **SELECT a AS A1, b AS A2, c AS A3 FROM test**. At the moment the prefix
 can be configured.
+
+### Add a column or expression to a select
+    Select select = (Select) CCJSqlParserUtil.parse("select a from mytable");
+    SelectUtils.addExpression(select, new Column("b"));
+
+Now **select** contains **SELECT a, b FROM mytable**.
