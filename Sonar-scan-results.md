@@ -1,4 +1,4 @@
-**Unfortunatly these serviceses are not available at the moment.**
+**Unfortunately these services are not available at the moment.**
 
 Sonar installation which monitors master branch of this project:
 
