@@ -3,6 +3,11 @@
 
 Starting from **stmt** you can dive into the parsing result. 
 
+### Simple Expression parsing
+    Expression expr = CCJSqlParserUtil.parseExpression("a*(5+mycolumn)");
+
+Starting from **expr** you can use the parsing result.
+
 ### Extract table names from SQL
     Statement statement = CCJSqlParserUtil.parse("SELECT * FROM MY_TABLE1");
     Select selectStatement = (Select) statement;
