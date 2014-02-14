@@ -3,6 +3,11 @@
 
 Starting from **stmt** you can dive into the parsing result. 
 
+### SQL script parsing
+    Statements stmt = CCJSqlParserUtil.parseStatements("SELECT * FROM tab1; SELECT * FROM tab2");
+
+Starting from **stmt** you can use the parsing result. 
+
 ### Simple Expression parsing
     Expression expr = CCJSqlParserUtil.parseExpression("a*(5+mycolumn)");
 
