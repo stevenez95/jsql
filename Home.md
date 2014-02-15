@@ -13,4 +13,6 @@ Find some examples of JSqlParsers usage.
 * Parsing [here](wiki/Examples-of-SQL-parsing). 
 * Building [here](wiki/Examples-of-SQL-building).
 
+* Simple expression evaluation [here](wiki/Example-of-expression-evaluation)
+
 Feel free to provide more examples. 
