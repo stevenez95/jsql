@@ -9,10 +9,6 @@ This is a quite simple expression evaluator of additions and multiplications usi
 	import net.sf.jsqlparser.parser.CCJSqlParserUtil;
 	import net.sf.jsqlparser.util.deparser.ExpressionDeParser;
 	
-	/**
-	 *
-	 * @author toben
-	 */
 	public class SimpleEvaluateExpr {
 	    
 	    public static void main( String[] args ) throws JSQLParserException {
