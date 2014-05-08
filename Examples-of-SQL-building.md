@@ -13,7 +13,7 @@ Or even simpler, if you do not want to build the right expression tree you can p
 
 ###Extending a simple insert
 
-```
+```java
 Insert insert = (Insert)CCJSqlParserUtil.parse("insert into mytable (col1) values (1)");
 System.out.println(insert.toString());
 
@@ -44,4 +44,35 @@ insert.getColumns().add(new Column("col3"));
 ((ExpressionList)insert.getItemsList()).getExpressions().add(new LongValue(10));
 
 System.out.println(insert.toString());
+```
+
+###Replacing String values
+
+Somebody wanted to publish some SQLs but wanted to scramble all concrete values. So here is a litte example of how to achieve this. 
+In short a visitor scans through the complete tree, finds all **StringValues** and replaces the 
+current value with **XXXX**. Using the new Adaptorclasses of JSqlParser 0.9 this could be achieved without using the Deparser.
+
+```java
+String sql ="SELECT NAME, ADDRESS, COL1 FROM USER WHERE SSN IN ('11111111111111', '22222222222222');";
+Select select = (Select) CCJSqlParserUtil.parse(sql);
+
+//Start of value modification
+StringBuilder buffer = new StringBuilder();
+ExpressionDeParser expressionDeParser = new ExpressionDeParser() {
+
+    @Override
+    public void visit(StringValue stringValue) {
+	this.getBuffer().append("XXXX");
+    }
+    
+};
+SelectDeParser deparser = new SelectDeParser(expressionDeParser,buffer );
+expressionDeParser.setSelectVisitor(deparser);
+expressionDeParser.setBuffer(buffer);
+select.getSelectBody().accept(deparser);
+//End of value modification
+
+
+System.out.println(buffer.toString());
+//Result is: SELECT NAME, ADDRESS, COL1 FROM USER WHERE SSN IN (XXXX, XXXX)
 ```
