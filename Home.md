@@ -6,7 +6,7 @@ The generated Java class hierarchy can be navigated using the [Visitor Pattern](
 This fork is continuously improved. All modifications could be followed at the
 [Release Notes](https://github.com/JSQLParser/JSqlParser/releases).
 
-Modifications before GitHubs release tagging are listed in the [Older Releases] page.
+Modifications before GitHubs release tagging are listed in the [Older Releases](Older_Releases) page.
 
 # How it works?
 The parser is built using JavaCC. The core JavaCC grammar for SQL has been taken from Guido Draheim's site and has been changed in order to produce a hierarchy of Java classes. 
