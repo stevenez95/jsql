@@ -1,6 +1,15 @@
 # What is JSqlParser?
-JSqlParser parses an SQL statement. Then the result can be accessed in a structured way. 
+JSqlParser parses one or more SQL statements. Then the result can be accessed in a structured way. 
 The generated Java class hierarchy can be navigated using the [Visitor Pattern](http://en.wikipedia.org/wiki/Visitor_pattern).
+
+# Contributions
+To help JSqlParsers development you are encouraged to provide 
+* feedback
+* bugreports
+* pull requests for new features
+* improvement requests
+
+Also I would like to know about needed examples or documentation stuff. 
 
 #Modifications
 JSqlParser is continuously improved. All modifications could be followed at the
@@ -9,7 +18,7 @@ JSqlParser is continuously improved. All modifications could be followed at the
 Modifications before GitHubs release tagging are listed in the [Older Releases](Older Releases) page.
 
 # How it works?
-The parser is built using JavaCC. The core JavaCC grammar for SQL has been taken from Guido Draheim's site and has been changed in order to produce a hierarchy of Java classes. 
+The parser is built using JavaCC. The core JavaCC grammar for SQL has been taken from Guido Draheim's site and has been changed in order to produce a hierarchy of Java classes. The classes called **deparsers** are used to build again the SQL text of the class hierarchy.
 
 Over the time the grammar was extended and now is a combination of specialities of grammars of various database systems. So some (not all) Oracle, MySql, SQLServer, PostgreSQL specific aspects can be parsed.
 
