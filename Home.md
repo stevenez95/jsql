@@ -3,8 +3,8 @@ JSqlParser parses an SQL statement. Then the result can be accessed in a structu
 The generated Java class hierarchy can be navigated using the [Visitor Pattern](http://en.wikipedia.org/wiki/Visitor_pattern).
 
 #Modifications
-This fork is continuously improved. All modifications could be followed at the
-[Release Notes](https://github.com/JSQLParser/JSqlParser/releases).
+JSqlParser is continuously improved. All modifications could be followed at the
+[Release Notes](https://github.com/JSQLParser/JSqlParser/releases). Additional News can be found [here](News).
 
 Modifications before GitHubs release tagging are listed in the [Older Releases](Older Releases) page.
 
