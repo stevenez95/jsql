@@ -22,7 +22,7 @@ To use JSqlParser in a maven project you have to include the following dependenc
     <version>0.9</version>
 </dependency>
 ```
-
+Be sure you added the latest release.
 
 # Examples
 Find some examples of JSqlParsers usage.
