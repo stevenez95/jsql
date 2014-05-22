@@ -50,7 +50,7 @@ System.out.println(insert.toString());
 
 Somebody wanted to publish some SQLs but wanted to scramble all concrete values. So here is a little example of how to achieve this. 
 In short a visitor scans through the complete tree, finds all **StringValues** and replaces the 
-current value with **XXXX**. Using the new Adaptorclasses of JSqlParser 0.9 this could be achieved without using the Deparser.
+current value with **XXXX**.
 
 ```java
 String sql ="SELECT NAME, ADDRESS, COL1 FROM USER WHERE SSN IN ('11111111111111', '22222222222222');";
