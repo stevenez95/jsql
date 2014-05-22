@@ -10,7 +10,8 @@ Modifications before GitHubs release tagging are listed in the [Older Releases](
 
 # How it works?
 The parser is built using JavaCC. The core JavaCC grammar for SQL has been taken from Guido Draheim's site and has been changed in order to produce a hierarchy of Java classes. 
-Over the time the grammar was extended and now is a combination of the grammars of various database systems. So some (not all) Oracle, MySql, SQLServer, PostgreSQL specific aspects can be parsed.
+
+Over the time the grammar was extended and now is a combination of specialities of grammars of various database systems. So some (not all) Oracle, MySql, SQLServer, PostgreSQL specific aspects can be parsed.
 
 # Maven
 To use JSqlParser in a maven project you have to include the following dependency:
