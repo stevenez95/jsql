@@ -48,7 +48,7 @@ System.out.println(insert.toString());
 
 ###Replacing String values
 
-Somebody wanted to publish some SQLs but wanted to scramble all concrete values. So here is a litte example of how to achieve this. 
+Somebody wanted to publish some SQLs but wanted to scramble all concrete values. So here is a little example of how to achieve this. 
 In short a visitor scans through the complete tree, finds all **StringValues** and replaces the 
 current value with **XXXX**. Using the new Adaptorclasses of JSqlParser 0.9 this could be achieved without using the Deparser.
 
