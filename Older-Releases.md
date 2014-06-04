@@ -1,4 +1,4 @@
-These are the modifications done before githubs relase tagging.
+These are the modifications of JSqlParser done before githubs relase tagging.
 
 ## Extensions Version 0.8.3
 
