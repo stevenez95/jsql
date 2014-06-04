@@ -1,5 +1,5 @@
 # What is JSqlParser?
-JSqlParser parses one or more SQL statements. Then the result can be accessed in a structured way. 
+JSqlParser is a SQL statement parser. It translates SQLs in a traversable hierarchy of Java classes. JSqlParser is not limited to one database but provides support for a lot of specials of Oracle, SqlServer, MySQL, PostgreSQL ... To name some, it has support for Oracles join syntax using (+), PostgreSQLs cast syntax using ::, relational operators like != and so on. Then the result can be accessed in a structured way. 
 The generated Java class hierarchy can be navigated using the [Visitor Pattern](http://en.wikipedia.org/wiki/Visitor_pattern).
 
 # Contributions
@@ -18,12 +18,12 @@ JSqlParser is continuously improved. All modifications could be followed at the
 Modifications before GitHubs release tagging are listed in the [Older Releases](Older Releases) page.
 
 # How it works?
-The parser is built using JavaCC. The core JavaCC grammar for SQL has been taken from Guido Draheim's site and has been changed in order to produce a hierarchy of Java classes. The classes called **deparsers** are used to build again the SQL text of the class hierarchy.
+The parser is built using **JavaCC**. The core JavaCC grammar for SQL has been taken from Guido Draheim's site and has been changed in order to produce a hierarchy of Java classes. The classes called **deparsers** are used to build again the SQL text of the class hierarchy.
 
-Over the time the grammar was extended and now is a combination of specialities of grammars of various database systems. So some (not all) Oracle, MySql, SQLServer, PostgreSQL specific aspects can be parsed.
+Over the time the grammar was extended and now is a combination of specialities of grammars of various database systems. It is grown by need. So some (not all) Oracle, MySql, SQLServer, PostgreSQL specific aspects can be parsed.
 
 # Maven
-To use JSqlParser in a maven project you have to include the following dependency:
+To use **JSqlParser **in a maven project you have to include the following dependency:
 
 ```
 <dependency>
