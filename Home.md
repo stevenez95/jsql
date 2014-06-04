@@ -42,3 +42,13 @@ Find some examples of JSqlParsers usage.
 * Simple expression evaluation [here](wiki/Example-of-expression-evaluation)
 
 Feel free to provide more examples. 
+
+
+## Original project
+
+This is a fork of the jsqlparser originally developed by ultimoamore.
+
+Original project websites:
+
+* http://jsqlparser.sourceforge.net
+* http://sourceforge.net/projects/jsqlparser/
