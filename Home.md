@@ -11,6 +11,10 @@ To help JSqlParsers development you are encouraged to provide
 
 Also I would like to know about needed examples or documentation stuff. 
 
+#Donations
+
+If you want to contribute or help this way, here is the possibility: [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=64CCN9JJANZXA "Help this JSqlParser version using Paypal")
+
 #Modifications
 JSqlParser is continuously improved. All modifications could be followed at the
 [Release Notes](https://github.com/JSQLParser/JSqlParser/releases). Additional News can be found [here](News).
