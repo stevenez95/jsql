@@ -6,6 +6,14 @@ After playing around and testing a bit of ANLTR 4 I am quite impressed about the
 * deparsing has to be separated again since the tree node classes of ANTLR could not be provided, like in JavaCC but are automatically generated
 * tooling around JSqlParser should be rebuild (e.g. TableNameExtractor)
 
+But there are significant improvements automatically at hand. 
+
+* ANTRL 4 generates listener and visitors for the parse tree. 
+* semantic predicates to disable rules
+* the grammar is much easiear to read
+* automatic operator precedence
+
+
 I appreciate any comments to this.
 
 Maybe there is another generator at hand that would be even better to use.
