@@ -34,3 +34,41 @@ can be configured.
     SelectUtils.addExpression(select, new Column("b"));
 
 Now **select** contains **SELECT a, b FROM mytable**.
+
+### Visualize parsing
+Sometime you need to know, what JSqlParser is doing parsing a special SQL statement. So the easiest way to achieve this, is to generate a parser that outputs debug messages. 
+
+1. So clone the JSqlParser repository. 
+1. Open file JSqlParser.jj.
+1. Edit the optione section in this file. Look for special options starting with DEBUG_.
+    options{
+        ...
+        DEBUG_PARSER=true;
+        DEBUG_LOOKAHEAD=false ;
+        DEBUG_TOKEN_MANAGER=false;
+        ...
+    }
+1. Build the parser.
+
+No you will get output like this:
+
+    Call:   Statement
+	  Call:   SingleStatement
+	    Call:   Select
+	      Call:   SelectBody
+		Call:   PlainSelect
+		  Consumed token: <"SELECT" at line 1 column 1>
+		  Call:   SelectItemsList
+		    Call:   SelectItem
+		      Consumed token: <"*" at line 1 column 8>
+		    Return: SelectItem
+		  Return: SelectItemsList
+		  Consumed token: <"FROM" at line 1 column 10>
+		  Call:   FromItem
+		    Call:   Table
+		      Call:   RelObjectName
+			Consumed token: <<S_IDENTIFIER>: "MYTABLE" at line 1 column 15>
+		      Return: RelObjectName
+		    Return: Table
+		  Return: FromItem
+   ...
