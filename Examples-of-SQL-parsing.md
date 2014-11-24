@@ -41,6 +41,7 @@ Sometime you need to know, what JSqlParser is doing parsing a special SQL statem
 1. So clone the JSqlParser repository. 
 1. Open file JSqlParser.jj.
 1. Edit the optione section in this file. Look for special options starting with DEBUG_.
+
     options{
         ...
         DEBUG_PARSER=true;
@@ -48,6 +49,7 @@ Sometime you need to know, what JSqlParser is doing parsing a special SQL statem
         DEBUG_TOKEN_MANAGER=false;
         ...
     }
+
 1. Build the parser.
 
 No you will get output like this:
