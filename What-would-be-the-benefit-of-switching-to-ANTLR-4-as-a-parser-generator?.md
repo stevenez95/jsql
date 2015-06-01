@@ -17,3 +17,14 @@ But there are significant improvements automatically at hand.
 I appreciate any comments to this.
 
 Maybe there is another generator at hand that would be even better to use.
+
+
+**Update:**
+After playing around with **JJTree** a bit, I noticed that most of my *significant improvements* of ANTLR 4 are already there. 
+
+* listener and visitor patterns are generated on demand
+* the readability of the grammar is no point, because I did not compare a cleaned up JavaCC grammar with the clean ANTLR 4 grammar, using ANTLR 4 I would also like to have some container objects (e.g. **Select**) created
+
+* semantic predicates to disable rules are not available but not needed at the moment, lexical states are there
+
+Therefore the a significant improvement would be *automatic operator precedence*, which would result in a smaller grammar.
