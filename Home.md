@@ -27,7 +27,7 @@ The parser is built using **JavaCC**. The core JavaCC grammar for SQL has been t
 Over the time the grammar was extended and now is a combination of specialities of grammars of various database systems. It is grown by need. So some (not all) Oracle, MySql, SQLServer, PostgreSQL specific aspects can be parsed.
 
 # Maven
-To use **JSqlParser **in a maven project you have to include the following dependency:
+To use **JSqlParser** in a maven project you have to include the following dependency:
 
 ```
 <dependency>
